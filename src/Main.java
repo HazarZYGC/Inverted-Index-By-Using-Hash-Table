@@ -17,11 +17,11 @@ public class Main {
 		//new file operations object.
 		
 		//...........................................
-		//DoubleHashMap<String,Integer> doubleHash = new DoubleHashMap<>(128);
-		ProbeHashMap<String,Integer> probeHash = new ProbeHashMap<>(128);
+		DoubleHashMap<String,Integer> doubleHash = new DoubleHashMap<>(128);
+		//ProbeHashMap<String,Integer> probeHash = new ProbeHashMap<>(128);
 		//...........................................
 		
-		String directories[]= {"business" , "sport" , "tech","politics","entertainment"};
+		String directories[]= {"input/business" , "input/sport" , "input/tech","input/politics","input/entertainment"};
 		//directories names.
 		int putco = 0;
 		for (int a = 0; a < directories.length; a++) {
@@ -40,10 +40,10 @@ public class Main {
 					if(words[j]!=null) {
 						
 				//...........................................
-				//	doubleHash.put(words[j], doubleHash.Summation(words[j]));
+					doubleHash.put(words[j], doubleHash.Summation(words[j]));
 			    //	doubleHash.put(words[j], doubleHash.Polynomial(words[j]));
 				 //  probeHash.put(words[j],probeHash.Summation(words[j]));
-					probeHash.put(words[j],probeHash.Polynomial(words[j]));
+					//probeHash.put(words[j],probeHash.Polynomial(words[j]));
 				//...........................................
 					
 					
@@ -62,11 +62,11 @@ public class Main {
 		
 	////////////////////////////////////////////////////////// TOTAL COLLISION PART.................	
 	//...........................................
-	//	System.out.println("Total collision :"+DoubleHashMap.counter);
-        System.out.println("Total collision :"+ProbeHashMap.counter);
+		System.out.println("Total collision :"+DoubleHashMap.counter);
+        //System.out.println("Total collision :"+ProbeHashMap.counter);
     //...........................................
-        System.out.println("Unique words count : " +ProbeHashMap.uniqueCounter);
-      // System.out.println("Unique words count : " +DoubleHashMap.uniqueCounter);
+        //System.out.println("Unique words count : " +ProbeHashMap.uniqueCounter);
+      System.out.println("Unique words count : " +DoubleHashMap.uniqueCounter);
         
         
 		
@@ -89,8 +89,8 @@ public class Main {
 			
 			
 			//...........................................
-			//doubleHash.searchingWord(fileOP.getWords1000()[i]);
-			probeHash.searchingWord(fileOP.getWords1000()[i]);
+			doubleHash.searchingWord(fileOP.getWords1000()[i]);
+			//probeHash.searchingWord(fileOP.getWords1000()[i]);
 			//...........................................
 			
 			
@@ -110,8 +110,8 @@ public class Main {
 		System.out.println("Average search time :" + sumSearchTime);
 		
 		//-------------------------------------------------------------------------------------------
-		 System.out.println("Count of words which are not found in hash table :"+ProbeHashMap.notfound);
-		//System.out.println("Count of words which are not found in hash table :"+DoubleHashMap.notfound);
+		 //System.out.println("Count of words which are not found in hash table :"+ProbeHashMap.notfound);
+		System.out.println("Count of words which are not found in hash table :"+DoubleHashMap.notfound);
 		//------------------------------------------------------------------------------------------
 		
 		
