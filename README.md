@@ -2,7 +2,7 @@
 
 ### HASH FUNCTİONS 
 SSF : Simple Summation Function  <br />
-SAP : Polynomial Accumulation Function
+PAF : Polynomial Accumulation Function
  <br /> <br /> 
 
 ![alt text](https://github.com/HazarZYGC/Inverted-Index-By-Using-Hash-Table/blob/master/img/1.PNG)
